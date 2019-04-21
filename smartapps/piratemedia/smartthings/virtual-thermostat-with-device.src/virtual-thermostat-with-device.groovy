@@ -11,10 +11,10 @@ definition(
 
 preferences {
 	section("Choose a temperature sensor(s)... (If multiple sensors are selected, the average value will be used)"){
-		input "sensors", "capability.temperatureMeasurement", title: "Sensor", multiple: true
+		input "sensors", "capability.temperatureMeasurement", title: "Sensor", multiple: true, required: false
 	}
 	section("Select the heater outlet(s)... "){
-		input "outlets", "capability.switch", title: "Outlets", multiple: true
+		input "outlets", "capability.switch", title: "Outlets", multiple: true, required: false
 	}
 	section("Only heat when contact isnt open (optional, leave blank to not require contact sensor)..."){
 		input "motion", "capability.contactSensor", title: "Contact", required: false
